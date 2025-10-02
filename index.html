@@ -5,13 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Galería de Recuerdos Interactiva</title>
     <style>
-        /* ====================================================================
-        MODIFICAR AQUÍ: Personaliza el fondo.
-        
-        Hemos activado la OPCIÓN 1: FONDO CON IMAGEN.
-        Cambia "atardecer.jpg" por el nombre de tu imagen de fondo.
-        ====================================================================
-        */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
@@ -22,38 +15,31 @@
             min-height: 100vh;
             text-align: center;
             
-            /* --- FONDO CON IMAGEN --- */
-            background-image: url('atardecer.jpg'); /* <<<< ASEGÚRATE QUE ESTE ES EL NOMBRE DE TU IMAGEN */
-            background-size: cover; /* Cubre toda la pantalla sin distorsionar */
-            background-position: center; /* Centra la imagen de fondo */
-            background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll */
-            color: #fff; /* Cambia el color del texto a blanco para que contraste con el fondo oscuro */
+            /* --- FONDO CON IMAGEN DE TU GITHUB --- */
+            background-image: url('https://raw.githubusercontent.com/master1612ms/master1612ms.github.io/main/Camera%20Roll/fondo.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
         }
 
-        /* Estilos generales */
         .contenido {
-            /* === CAMBIO CLAVE AQUÍ: Fondo transparente === */
-            background-color: transparent; /* Ahora el fondo del contenedor es transparente */
+            background-color: transparent;
             padding: 20px 30px;
             border-radius: 15px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3); /* Sombra para que el contenido destaque */
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
             max-width: 800px;
             width: 90%;
         }
         h1 {
-            color: #fff; /* También cambiamos el color del título a blanco para que se vea */
+            color: #fff;
             margin-bottom: 20px;
-            /* Opcional: añade una sombra al texto para que resalte más */
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
         }
-
-        /* Contenedor del carrusel */
         .slideshow-container {
             position: relative;
             margin: auto;
         }
-
-        /* Oculta las imágenes por defecto */
         .mis-diapositivas {
             display: none;
         }
@@ -61,12 +47,9 @@
             width: 100%;
             border-radius: 8px;
             vertical-align: middle;
-            /* Opcional: Añade un borde o sombra a las imágenes para que destaquen */
             border: 3px solid rgba(255, 255, 255, 0.8);
             box-shadow: 0 0 15px rgba(0,0,0,0.5);
         }
-
-        /* Efecto de transición (fade) */
         .fade {
             animation-name: fade;
             animation-duration: 1.5s;
@@ -75,8 +58,6 @@
             from {opacity: .4}
             to {opacity: 1}
         }
-        
-        /* Estilos para los puntos de navegación */
         .contenedor-puntos {
             text-align: center;
             margin-top: 15px;
@@ -86,22 +67,19 @@
             height: 15px;
             width: 15px;
             margin: 0 4px;
-            background-color: rgba(255, 255, 255, 0.5); /* Puntos semitransparentes */
+            background-color: rgba(255, 255, 255, 0.5);
             border-radius: 50%;
             display: inline-block;
             transition: background-color 0.6s ease;
         }
         .activo, .punto:hover {
-            background-color: #fff; /* Puntos activos o al pasar el ratón se ven blancos */
+            background-color: #fff;
         }
-        
-        /* Estilos para el reproductor de música */
         .reproductor-audio {
             margin-top: 20px;
         }
-        /* Estilos para que el reproductor de audio se vea bien sobre el fondo */
         #miAudio {
-            filter: drop-shadow(0 2px 5px rgba(0,0,0,0.5)); /* Sombra para que resalte */
+            filter: drop-shadow(0 2px 5px rgba(0,0,0,0.5));
         }
     </style>
 </head>
@@ -112,104 +90,42 @@
 
         <div class="slideshow-container">
             <div class="mis-diapositivas fade">
-                <img src="1.jpeg" alt="Descripción de la foto 1">
+                <img src="https://raw.githubusercontent.com/master1612ms/master1612ms.github.io/main/Camera%20Roll/1.jpeg" alt="Recuerdo 1">
             </div>
             <div class="mis-diapositivas fade">
-                <img src="2.jpeg" alt="Descripción de la foto 2">
+                <img src="https://raw.githubusercontent.com/master1612ms/master1612ms.github.io/main/Camera%20Roll/2.jpeg" alt="Recuerdo 2">
             </div>
             <div class="mis-diapositivas fade">
-                <img src="3.jpeg" alt="Descripción de la foto 3">
+                <img src="https://raw.githubusercontent.com/master1612ms/master1612ms.github.io/main/Camera%20Roll/3.jpeg" alt="Recuerdo 3">
             </div>
             <div class="mis-diapositivas fade">
-                <img src="4.jpeg" alt="Descripción de la foto 4">
+                <img src="https://raw.githubusercontent.com/master1612ms/master1612ms.github.io/main/Camera%20Roll/4.jpeg" alt="Recuerdo 4">
             </div>
-            </div>
+        </div>
 
         <div class="contenedor-puntos">
             <span class="punto" onclick="mostrarDiapositivaActual(1)"></span>
             <span class="punto" onclick="mostrarDiapositivaActual(2)"></span>
             <span class="punto" onclick="mostrarDiapositivaActual(3)"></span>
             <span class="punto" onclick="mostrarDiapositivaActual(4)"></span>
-            </div>
+        </div>
 
         <div class="reproductor-audio">
             <audio id="miAudio" controls loop>
-                <source src="vamonos a marte.mp3" type="audio/mpeg"> Tu navegador no soporta el elemento de audio.
+                <source src="https://raw.githubusercontent.com/master1612ms/master1612ms.github.io/main/Camera%20Roll/vamonos%20a%20marte.mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
             </audio>
         </div>
     </div>
 
     <script>
         let slideIndex = 0;
-        let slideTimeout; 
-
-        // Inicia el carrusel la primera vez
+        let slideTimeout;
         cicloDiapositivas();
-
-        function cicloDiapositivas() {
-            let i;
-            let diapositivas = document.getElementsByClassName("mis-diapositivas");
-            let puntos = document.getElementsByClassName("punto");
-            
-            // Oculta todas las diapositivas
-            for (i = 0; i < diapositivas.length; i++) {
-                diapositivas[i].style.display = "none";
-            }
-            
-            // Incrementa el índice para pasar a la siguiente
-            slideIndex++;
-            if (slideIndex > diapositivas.length) {
-                slideIndex = 1; // Si llega al final, vuelve a la primera
-            }
-            
-            // Quita la clase 'activo' de todos los puntos
-            for (i = 0; i < puntos.length; i++) {
-                puntos[i].className = puntos[i].className.replace(" activo", "");
-            }
-            
-            // Muestra la diapositiva actual y activa el punto correspondiente
-            diapositivas[slideIndex - 1].style.display = "block";
-            puntos[slideIndex - 1].className += " activo";
-            
-            // Reinicia el temporizador para la siguiente diapositiva
-            clearTimeout(slideTimeout);
-            slideTimeout = setTimeout(cicloDiapositivas, 4000); // Cambia cada 4 segundos
-        }
-
-        // Función para mostrar una diapositiva específica al hacer clic en un punto
-        function mostrarDiapositivaActual(n) {
-            slideIndex = n - 1; // Ajustamos el índice (el array es base 0)
-            cicloDiapositivas(); // Llama a la función principal para actualizar
-        }
-
-        /* ====================================================================
-        JAVASCRIPT PARA EL AUDIO AUTOMÁTICO
-        Intenta reproducir el audio. Si el navegador lo bloquea, espera a que
-        el usuario haga clic en cualquier parte de la página para iniciar la música.
-        ====================================================================
-        */
-        document.addEventListener('DOMContentLoaded', (event) => {
-            const audio = document.getElementById('miAudio');
-            
-            // Intento de reproducir automáticamente
-            let promise = audio.play();
-            
-            if (promise !== undefined) {
-                promise.then(_ => {
-                    // Autoplay funcionó
-                    console.log("La música se inició automáticamente.");
-                }).catch(error => {
-                    // Autoplay fue bloqueado
-                    console.log("Autoplay bloqueado. Esperando interacción del usuario.");
-                    // Agregamos un evento para que al primer clic, se inicie la música
-                    window.addEventListener('click', () => {
-                        audio.play();
-                    }, { once: true }); // 'once: true' hace que este evento solo ocurra una vez
-                });
-            }
-        });
+        function cicloDiapositivas() { let i; let diapositivas = document.getElementsByClassName("mis-diapositivas"); let puntos = document.getElementsByClassName("punto"); for (i = 0; i < diapositivas.length; i++) { diapositivas[i].style.display = "none"; } slideIndex++; if (slideIndex > diapositivas.length) { slideIndex = 1; } for (i = 0; i < puntos.length; i++) { puntos[i].className = puntos[i].className.replace(" activo", ""); } diapositivas[slideIndex - 1].style.display = "block"; puntos[slideIndex - 1].className += " activo"; clearTimeout(slideTimeout); slideTimeout = setTimeout(cicloDiapositivas, 4000); }
+        function mostrarDiapositivaActual(n) { slideIndex = n - 1; cicloDiapositivas(); }
+        document.addEventListener('DOMContentLoaded', (event) => { const audio = document.getElementById('miAudio'); let promise = audio.play(); if (promise !== undefined) { promise.then(_ => {}).catch(error => { window.addEventListener('click', () => { audio.play(); }, { once: true }); }); } });
     </script>
 
 </body>
-
 </html>
